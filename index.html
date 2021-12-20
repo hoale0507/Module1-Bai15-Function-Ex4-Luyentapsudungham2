@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 02</title>
+</head>
+<body>
+<script>
+    // Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    function cal1(num){
+        return Math.pow(num,2);
+    }
+    console.log(cal1(10));
+    //     Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+    function cal2(a){
+        let s = a*a*3.14;
+        let p = a*3.14;
+        console.log("Square is " + s + ", "+" Perimeter is "+p);
+    }
+    cal2(10);
+
+    // Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    let multi = 1;
+    function cal3(num){
+        for(let i = 1; i <= num; i++){
+            multi *= i;
+        }
+        console.log("Giai thừa của "+num+ " is "+multi);
+        return multi;
+    }
+    cal3(3);
+    //     Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true,
+    //     ngược lại trả về false.
+    function checkNum(char){
+        if(typeof char === "number"){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    if(checkNum(20)){
+        console.log("Là ký tự số");
+    } else{
+        console.log('không là ký tự số');
+    }
+    //     Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+    function compare(a1,a2,a3){
+        let min;
+        if (a1 < a2) {
+            if(a1 < a3) {
+                min = a1;
+            } else {
+                min = a3;
+            }
+        } else if (a3 > a2){
+            min = a2;
+        } else{
+            min = a3;
+        }
+        return min;
+    }
+    console.log(compare(4,6,3));
+    //     Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.
+    // Nếu là nguyên dương trả về true, ngược lại trả về false.
+    function check1(num){
+        if(num%1 === 0 && num>0) {
+        return true;
+        } else{
+            return false;
+        }
+    }
+
+    //     Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+    function swap(a,b){
+        let c = a;
+        a = b;
+        b = c;
+    }
+</script>
+</body>
+</html>
